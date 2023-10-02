@@ -1,0 +1,71 @@
+/* Définition des variables de couleur */
+:root {
+    --primary-foreground-color: #fff; /* Couleur du texte et des icônes */
+    --primary-background-color: #2B333F; /* Couleur de fond par défaut */
+    --center-big-play-button: false; /* Centrer le gros bouton de lecture (par défaut : false) */
+    --big-play-button-font-size: 3em; /* Taille de police du gros bouton de lecture */
+    --big-play-button-width: 3em; /* Largeur du gros bouton de lecture */
+    --big-play-button-height: 1.5em; /* Hauteur du gros bouton de lecture */
+    --big-play-button-border-width: 2px; /* Largeur de la bordure du gros bouton de lecture */
+    --big-play-button-border-radius: 9px; /* Rayon de bordure du gros bouton de lecture */
+    --control-background-opacity: 0.7; /* Opacité du fond des contrôles */
+    --slider-background-opacity: 0.5; /* Opacité du fond du curseur */
+  }
+  
+  /* Style global du lecteur vidéo */
+  .video-js {
+    font-size: 10px;
+    color: var(--primary-foreground-color);
+  }
+  
+  /* Style du gros bouton de lecture */
+  .vjs-default-skin .vjs-big-play-button {
+    font-size: var(--big-play-button-font-size);
+    line-height: var(--big-play-button-height);
+    height: var(--big-play-button-height);
+    width: var(--big-play-button-width);
+    border: var(--big-play-button-border-width) solid var(--primary-foreground-color);
+    border-radius: var(--big-play-button-border-radius);
+  
+    /* Centrer le gros bouton de lecture si nécessaire */
+    @if var(--center-big-play-button) {
+      left: 50%;
+      top: 50%;
+      margin-left: calc(-1 * var(--big-play-button-width) / 2);
+      margin-top: calc(-1 * var(--big-play-button-height) / 2);
+    } @else {
+      left: 0.5em;
+      top: 0.5em;
+    }
+  }
+  
+  /* Style des contrôles du lecteur vidéo */
+  .video-js .vjs-control-bar,
+  .video-js .vjs-big-play-button,
+  .video-js .vjs-menu-button .vjs-menu-content {
+    background-color: var(--primary-background-color);
+    background-color: rgba(var(--primary-background-color), var(--control-background-opacity));
+  }
+  
+  /* Style du curseur du lecteur vidéo */
+  .video-js .vjs-slider {
+    background-color: rgba(var(--primary-background-color), var(--slider-background-opacity));
+  }
+  
+  /* Style de la barre de progression et du volume */
+  .video-js .vjs-volume-level,
+  .video-js .vjs-play-progress,
+  .video-js .vjs-slider-bar {
+    background: var(--primary-foreground-color);
+  }
+  
+  /* Style de la barre de chargement */
+  .video-js .vjs-load-progress {
+    background: rgba(var(--primary-background-color), var(--slider-background-opacity));
+  }
+  
+  /* Style des éléments de chargement de la barre de chargement */
+  .video-js .vjs-load-progress div {
+    background: rgba(var(--primary-background-color), 0.75);
+  }
+  

@@ -1,0 +1,150 @@
+/* Styles pour le corps du document */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+/* Styles pour l'en-tête */
+header {
+    background-color: #2ecc71;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+header nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Styles pour la section principale */
+main {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #2c3e50;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: blue;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+main p {
+    text-align: justify;
+}
+
+/* Styles pour le pied de page */
+footer {
+    background-color: #34495e;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Styles pour le diaporama */
+#slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slide {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.fade {
+    animation: fade 4s ease-in-out infinite; /* Ralentissement de l'animation à 4s */
+}
+
+@keyframes rotateCube {
+    0% { transform: rotateX(0deg) rotateY(0deg); }
+    100% { transform: rotateX(360deg) rotateY(360deg); }
+  }
+  
+  .cube {
+    position: relative;
+    margin: 50px auto;
+    width: 400px;
+    height: 400px;
+    transform-style: preserve-3d;
+    animation: rotateCube 6s infinite linear;
+  }
+  
+  .cube div {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .front, .back, .left, .right, .top, .bottom {
+    background-size: contain;
+    background-position: center;
+  }
+  .front  { transform: rotateY(0deg) translateZ(200px); background: url('../../image/allemagne.png') no-repeat center center;; }
+  .back   { transform: rotateY(180deg) translateZ(200px); background: url('../../image/chine.png') no-repeat center center;; }
+  .left   { transform: rotateY(-90deg) translateZ(200px); background: url('../../image/PayDay-3.jpg') no-repeat center center;; }
+  .right  { transform: rotateY(90deg) translateZ(200px); background: url('../../image/Starfield-game-HD-scaled-1.webp') no-repeat center center;; }
+  .top    { transform: rotateX(90deg) translateZ(200px); background: url('../../image/1706831-bg3-1-article_image_t-2.jpg') no-repeat center center;; }
+  .bottom { transform: rotateX(-90deg) translateZ(200px); background: url('../../image/obliteration.png') no-repeat center center;; }
+  
+  /* Assurez-vous de remplacer 'front_image.jpg', 'back_image.jpg', etc., par les chemins corrects de vos images */
+  
